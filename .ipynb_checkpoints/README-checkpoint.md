@@ -1,0 +1,11 @@
+# [nist_MM4250_calibration_data_2025](https://github.com/lafefspietz/nist_MM4250_calibration_data_2025/)
+
+This data set represents a set of measurements carried out on the Menlo Micro MM4250 single pole six throw MEMS-based switches with built in calibration standards on the printed circuit board.  This data set is the product of measurements carried out at [NIST](https://www.nist.gov/) [Boulder](https://www.boulder.doc.gov/) in the [Flux Quantum Electronics(FQE)](https://www.nist.gov/programs-projects/flux-quantum-electronics) project of the [Superconductive Electronics](https://www.nist.gov/ctl/rf-technology-division/superconductive-electronics-group) group in the [Radio Frequency Technology](https://www.nist.gov/ctl/rf-technology-division) division of the [Communications Technology Laboratory](https://www.nist.gov/ctl). Data were taken primarily by Lafe Spietz in a cryostat which was built in-house at NIST which has a base temperature of just under 3 [kelvin](https://www.bipm.org/en/si-base-units/kelvin) and a pair of [dilution refrigerators](https://en.wikipedia.org/wiki/Dilution_refrigerator) which are in common use in our project.  Data were taken from early June through early August of 2025, in [building 1 of NIST, Boulder](https://www.openstreetmap.org/#map=18/39.995189/-105.261952).
+
+# Jupyter Notebooks
+
+ - [scikitrf_tier1_cal.ipynb](scikitrf_tier1_cal.ipynb)
+ - [scikitrf_tier2_cal.ipynb](scikitrf_tier2_cal.ipynb)
+ - [single_switch_0030_data.ipynb](single_switch_0030_data.ipynb)
+ - [dilution_refrigerator_data.ipynb](dilution_refrigerator_data.ipynb)
+
