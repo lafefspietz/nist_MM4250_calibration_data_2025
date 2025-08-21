@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Model FileName="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\SMA Maury Offset Shorts\Reverse Ports Operator.model" CreationTime="6/11/2025 10:12:17 AM" AssemblyVersion="1.4.40.19108" UserName="dylan">
+  <MenuStripItems>
+    <SelectResultsDirectoryToolStripMenuItem Enabled="True" Checked="False" />
+    <RunCalculationsInParallel Enabled="True" Checked="True" />
+    <CalibrateToolStripMenuItem Enabled="True" Checked="False" />
+    <GetFrequenciesFromFile Enabled="True" Checked="False" />
+  </MenuStripItems>
+  <MenuStripTextBoxes>
+    <ResultsDirectory Enabled="True" Text="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\SMA Maury Offset Shorts\SMA 3_5mm Capacitance_model_Results" />
+    <NumberMonteCarloSimulations Enabled="True" Text="1000" />
+    <StartFrequency Enabled="True" Text="0.01" />
+    <StopFrequency Enabled="True" Text="15" />
+    <StepFrequency Enabled="True" Text="0.01" />
+    <FrequenciesFromFile Enabled="True" Text="" />
+    <EpsEffR Enabled="True" Text="1" />
+    <EpsEffI Enabled="True" Text="0" />
+  </MenuStripTextBoxes>
+  <MenuStripComboBoxes />
+  <Controls>
+    <DifferentialModel ControlType="System.Windows.Forms.CheckBox" ControlText="Only include variation of this model from its mean in the analysis." FullName="Me_TableLayoutPanel1_DifferentialModel" Enabled="False" Visible="True" Checked="False" />
+    <ModelOrigin ControlType="System.Windows.Forms.ComboBox" ControlText="NIST" FullName="Me_TableLayoutPanel1_GroupBox2_ModelOrigin" Enabled="True" Visible="False" SelectedIndex="0" Count="1">
+      <Item Index="0" Text="NIST" />
+    </ModelOrigin>
+    <ModelType ControlType="System.Windows.Forms.ComboBox" ControlText="Reverse ports of the scattering parameters" FullName="Me_TableLayoutPanel1_GroupBox2_ModelType" Enabled="True" Visible="True" SelectedIndex="1" Count="6">
+      <Item Index="0" Text="Invert scattering parameters" />
+      <Item Index="1" Text="Reverse ports of the scattering parameters" />
+      <Item Index="2" Text="Calibrate S-parameters with NIST two-tier crosstalk model" />
+      <Item Index="3" Text="UnCalibrate S-parameters with NIST two-tier crosstalk model" />
+      <Item Index="4" Text="Calibrate S-parameters with conventional crosstalk model" />
+      <Item Index="5" Text="UnCalibrate S-parameters with conventional crosstalk model" />
+    </ModelType>
+    <ModelName ControlType="System.Windows.Forms.TextBox" ControlText="Reverse ports" FullName="Me_TableLayoutPanel1_GroupBox2_ModelName" Enabled="True" Visible="True" />
+    <ModelGroup ControlType="System.Windows.Forms.ComboBox" ControlText="Operators" FullName="Me_TableLayoutPanel1_GroupBox2_ModelGroup" Enabled="True" Visible="True" SelectedIndex="9" Count="11">
+      <Item Index="0" Text="Generic" />
+      <Item Index="1" Text="Coaxial transmission lines" />
+      <Item Index="2" Text="Rectangular waveguide" />
+      <Item Index="3" Text="Microstrip" />
+      <Item Index="4" Text="Coplanar waveguide" />
+      <Item Index="5" Text="Cables" />
+      <Item Index="6" Text="Coupling" />
+      <Item Index="7" Text="Antennas" />
+      <Item Index="8" Text="Noise" />
+      <Item Index="9" Text="Operators" />
+      <Item Index="10" Text="User models" />
+    </ModelGroup>
+    <ModelDescription ControlType="System.Windows.Forms.TextBox" ControlText="Reverse the ports of the scattering parameters.&#xD;&#xA;&#xD;&#xA;Authored by Dylan Williams." FullName="Me_TableLayoutPanel1_GroupBox3_ModelDescription" Enabled="True" Visible="True" />
+    <DescriptionTextBox ControlType="System.Windows.Forms.TextBox" ControlText="" FullName="Me_TableLayoutPanel1_GroupBox4_DescriptionTextBox" Enabled="True" Visible="True" />
+    <ModelMechanisms ControlType="CustomFormControls.FLV_FixedDetailsList" ControlText="List of the mechanisms used in the model" FullName="Me_TableLayoutPanel1_GroupBox1_Panel4_ModelMechanisms" Enabled="True" Visible="True" Count="0" />
+  </Controls>
+</Model>

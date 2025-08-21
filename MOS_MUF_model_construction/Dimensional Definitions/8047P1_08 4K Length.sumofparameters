@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<SumofParameters FileName="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\Dimensional Definitions\8047P1_08 4K Length.sumofparameters" CreationTime="2/11/2025 4:16:36 PM" AssemblyVersion="1.4.40.19106" UserName="dylan">
+  <MenuStripItems>
+    <SelectResultsDirectoryToolStripMenuItem Enabled="True" Checked="False" />
+    <SupressSensitivityAnalysis Enabled="True" Checked="False" />
+    <CloseCalculators Enabled="True" Checked="False" />
+    <RunCalculationsInParallel Enabled="True" Checked="True" />
+    <CreateResultWithUncertaintiesToolStripMenuItem Enabled="True" Checked="False" />
+  </MenuStripItems>
+  <MenuStripTextBoxes>
+    <ResultsDirectory Enabled="True" Text="" />
+    <NumberMonteCarloSimulations Enabled="True" Text="1000" />
+  </MenuStripTextBoxes>
+  <MenuStripComboBoxes />
+  <Controls>
+    <TextExpression ControlType="System.Windows.Forms.TextBox" ControlText="{TCE to 4K Adjustment}*{TCE to 4K}*{8047P1_08 Length}" FullName="Me_GroupBox2_TextExpression" Enabled="True" Visible="True" />
+    <ParameterList ControlType="CustomFormControls.FLV_VariableDetailsList_Parameter" ControlText="List of the model parameters to be summed." FullName="Me_GroupBox1_ParameterList" Enabled="True" Visible="True" Count="3">
+      <Item Index="0" Text="TCE to 4K Adjustment" Count="17">
+        <SubItem Index="0" Text="TCE to 4K Adjustment" />
+        <SubItem Index="1" Text="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\Dimensional Definitions\TCE to 4K Adjustment.parameter" />
+        <SubItem Index="2" Text="1.0 " />
+        <SubItem Index="3" Text="+/- 0.001 " />
+        <SubItem Index="4" Text="rectangular" />
+        <SubItem Index="5" Text="Infinite" />
+        <SubItem Index="6" Text="no" />
+        <SubItem Index="7" Text="no" />
+        <SubItem Index="8" Text="TCE to 4 K" />
+        <SubItem Index="9" Text="1.0" />
+        <SubItem Index="10" Text="" />
+        <SubItem Index="11" Text="1" />
+        <SubItem Index="12" Text="0.001" />
+        <SubItem Index="13" Text="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\Dimensional Definitions\TCE to 4K Adjustment.parameter" />
+        <SubItem Index="14" Text="3.0" />
+        <SubItem Index="15" Text="3.0" />
+        <SubItem Index="16" Text="False" />
+      </Item>
+      <Item Index="1" Text="TCE to 4K" Count="17">
+        <SubItem Index="0" Text="TCE to 4K" />
+        <SubItem Index="1" Text="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\Dimensional Definitions\TCE to 4K.parameter" />
+        <SubItem Index="2" Text="0.9967 " />
+        <SubItem Index="3" Text="+/- 0 " />
+        <SubItem Index="4" Text="rectangular" />
+        <SubItem Index="5" Text="Infinite" />
+        <SubItem Index="6" Text="no" />
+        <SubItem Index="7" Text="no" />
+        <SubItem Index="8" Text="TCE to 4 K" />
+        <SubItem Index="9" Text="0.9967" />
+        <SubItem Index="10" Text="" />
+        <SubItem Index="11" Text="1" />
+        <SubItem Index="12" Text="0" />
+        <SubItem Index="13" Text="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\Dimensional Definitions\TCE to 4K.parameter" />
+        <SubItem Index="14" Text="3.0" />
+        <SubItem Index="15" Text="3.0" />
+        <SubItem Index="16" Text="False" />
+      </Item>
+      <Item Index="2" Text="8047P1_08 Length" Count="17">
+        <SubItem Index="0" Text="8047P1_08 Length" />
+        <SubItem Index="1" Text="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\Dimensional Definitions\8047P1_08 Length.parameter" />
+        <SubItem Index="2" Text="10.80008  mm" />
+        <SubItem Index="3" Text="+/- 0.0254  mm" />
+        <SubItem Index="4" Text="rectangular" />
+        <SubItem Index="5" Text="Infinite" />
+        <SubItem Index="6" Text="no" />
+        <SubItem Index="7" Text="no" />
+        <SubItem Index="8" Text="8047P1.08 834105 SN: R163 10.795mm/0.4252&quot;" />
+        <SubItem Index="9" Text="10.80008" />
+        <SubItem Index="10" Text=" mm" />
+        <SubItem Index="11" Text="0.001" />
+        <SubItem Index="12" Text="0.0254" />
+        <SubItem Index="13" Text="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\Dimensional Definitions\8047P1_08 Length.parameter" />
+        <SubItem Index="14" Text="3.0" />
+        <SubItem Index="15" Text="3.0" />
+        <SubItem Index="16" Text="False" />
+      </Item>
+    </ParameterList>
+  </Controls>
+</SumofParameters>

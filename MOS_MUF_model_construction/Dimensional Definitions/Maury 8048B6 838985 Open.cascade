@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Cascade FileName="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\Dimensional Definitions\Maury 8048B6 838985 Open.cascade" CreationTime="6/11/2025 3:03:24 PM" AssemblyVersion="1.4.40.19106" UserName="dylan">
+  <MenuStripItems>
+    <FrequenciesToolStripMenuItem Enabled="True" Checked="False" />
+    <SelectResultsDirectoryToolStripMenuItem Enabled="True" Checked="False" />
+    <CalibrateToolStripMenuItem Enabled="True" Checked="False" />
+    <GetFrequenciesFromFile Enabled="True" Checked="False" />
+  </MenuStripItems>
+  <MenuStripTextBoxes>
+    <ResultsDirectory Enabled="True" Text="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\Dimensional Definitions\Maury 8048B6 838985 Open_cascade_Results" />
+    <NumberMonteCarloSimulations Enabled="True" Text="1000" />
+    <StartFrequency Enabled="True" Text="0.01" />
+    <StopFrequency Enabled="True" Text="15" />
+    <StepFrequency Enabled="True" Text="0.01" />
+    <FrequenciesFromFile Enabled="True" Text="" />
+    <EpsEffR Enabled="True" Text="1" />
+    <EpsEffI Enabled="True" Text="0" />
+  </MenuStripTextBoxes>
+  <MenuStripComboBoxes>
+    <MagnitudePhaseInterpolationMethod Enabled="True" SelectedIndex="-1" />
+  </MenuStripComboBoxes>
+  <Controls>
+    <CascadeName ControlType="System.Windows.Forms.TextBox" ControlText="Maury 8048B6 838985 Open" FullName="Me_TableLayoutPanel1_GroupBox2_CascadeName" Enabled="True" Visible="True" />
+    <DescriptionTextBox ControlType="System.Windows.Forms.TextBox" ControlText="Maury 8048B6 838985 Open SN:S209" FullName="Me_TableLayoutPanel1_GroupBox3_DescriptionTextBox" Enabled="True" Visible="True" />
+    <CascadeElements ControlType="CustomFormControls.FLV_VariableIconList" ControlText="File View of the elements of the cascade" FullName="Me_TableLayoutPanel1_GroupBox1_Panel4_CascadeElements" Enabled="True" Visible="True" Count="3">
+      <Item Index="0" Text="Maury 8048B6 838985 Open" Count="2">
+        <SubItem Index="0" Text="Maury 8048B6 838985 Open" />
+        <SubItem Index="1" Text="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\Dimensional Definitions\Maury 8048B6 838985 Open.model" />
+      </Item>
+      <Item Index="1" Text="Open" Count="2">
+        <SubItem Index="0" Text="Open" />
+        <SubItem Index="1" Text="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\Dimensional Definitions\Open.model" />
+      </Item>
+      <Item Index="2" Text="Maury 8048B6 838985 Open" Count="2">
+        <SubItem Index="0" Text="Maury 8048B6 838985 Open" />
+        <SubItem Index="1" Text="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\Dimensional Definitions\Maury 8048B6 838985 Open.model" />
+      </Item>
+    </CascadeElements>
+  </Controls>
+</Cascade>

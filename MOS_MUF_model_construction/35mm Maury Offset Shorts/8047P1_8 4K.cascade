@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Cascade FileName="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\35mm Maury Offset Shorts\8047P1_8 4K.cascade" CreationTime="6/11/2025 11:44:36 AM" AssemblyVersion="1.4.40.19106" UserName="dylan">
+  <MenuStripItems>
+    <FrequenciesToolStripMenuItem Enabled="True" Checked="True" />
+    <SelectResultsDirectoryToolStripMenuItem Enabled="True" Checked="False" />
+    <CalibrateToolStripMenuItem Enabled="True" Checked="False" />
+    <GetFrequenciesFromFile Enabled="True" Checked="False" />
+  </MenuStripItems>
+  <MenuStripTextBoxes>
+    <ResultsDirectory Enabled="True" Text="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\35mm Maury Offset Shorts\8047P1_8 4K_cascade_Results" />
+    <NumberMonteCarloSimulations Enabled="True" Text="1000" />
+    <StartFrequency Enabled="True" Text="0.01" />
+    <StopFrequency Enabled="True" Text="15" />
+    <StepFrequency Enabled="True" Text="0.01" />
+    <FrequenciesFromFile Enabled="True" Text="" />
+    <EpsEffR Enabled="True" Text="1" />
+    <EpsEffI Enabled="True" Text="0" />
+  </MenuStripTextBoxes>
+  <MenuStripComboBoxes>
+    <MagnitudePhaseInterpolationMethod Enabled="True" SelectedIndex="-1" />
+  </MenuStripComboBoxes>
+  <Controls>
+    <CascadeName ControlType="System.Windows.Forms.TextBox" ControlText="3.5 mm Maury 8047P1_8 calibration standard at 4K" FullName="Me_TableLayoutPanel1_GroupBox2_CascadeName" Enabled="True" Visible="True" />
+    <DescriptionTextBox ControlType="System.Windows.Forms.TextBox" ControlText="3.5 mm Maury 8047P1_8 calibration standard at 4K&#xD;&#xA;" FullName="Me_TableLayoutPanel1_GroupBox3_DescriptionTextBox" Enabled="True" Visible="True" />
+    <CascadeElements ControlType="CustomFormControls.FLV_VariableIconList" ControlText="File View of the elements of the cascade" FullName="Me_TableLayoutPanel1_GroupBox1_Panel4_CascadeElements" Enabled="True" Visible="True" Count="3">
+      <Item Index="0" Text="8047P1_8 4K" Count="2">
+        <SubItem Index="0" Text="8047P1_8 4K" />
+        <SubItem Index="1" Text="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\Dimensional Definitions\8047P1_8 4K.model" />
+      </Item>
+      <Item Index="1" Text="Reverse Ports Operator" Count="2">
+        <SubItem Index="0" Text="Reverse Ports Operator" />
+        <SubItem Index="1" Text="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\35mm Maury Offset Shorts\Reverse Ports Operator.model" />
+      </Item>
+      <Item Index="2" Text="8047P1_8 4K" Count="2">
+        <SubItem Index="0" Text="8047P1_8 4K" />
+        <SubItem Index="1" Text="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\Dimensional Definitions\8047P1_8 4K.model" />
+      </Item>
+    </CascadeElements>
+  </Controls>
+</Cascade>

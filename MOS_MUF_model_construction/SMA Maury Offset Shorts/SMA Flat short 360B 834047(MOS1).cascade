@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Cascade FileName="C:\xampp\htdocs\SP6T_ECAL_switch_data\Maury Offset Short Definitions\SMA Maury Offset Shorts\SMA Flat short 360B 834047.cascade" CreationTime="8/8/2025 9:10:14 AM" AssemblyVersion="1.4.29.18599" UserName="lfs">
+  <MenuStripItems>
+    <OpenToolStripMenuItem1 Enabled="True" Checked="True" />
+    <SelectResultsDirectoryToolStripMenuItem Enabled="True" Checked="False" />
+    <CalibrateToolStripMenuItem Enabled="True" Checked="False" />
+  </MenuStripItems>
+  <MenuStripTextBoxes>
+    <ResultsDirectory Enabled="True" Text="C:\xampp\htdocs\SP6T_ECAL_switch_data\Maury Offset Short Definitions\SMA Maury Offset Shorts\SMA Flat short 360B 834047_cascade_Results" />
+    <NumberMonteCarloSimulations Enabled="True" Text="1000" />
+    <StartFrequency Enabled="True" Text="0.001" />
+    <StopFrequency Enabled="True" Text="20" />
+    <StepFrequency Enabled="True" Text="0.002" />
+    <EpsEffR Enabled="True" Text="1" />
+    <EpsEffI Enabled="True" Text="0" />
+  </MenuStripTextBoxes>
+  <MenuStripComboBoxes>
+    <MagnitudePhaseInterpolationMethod Enabled="True" SelectedIndex="-1" />
+  </MenuStripComboBoxes>
+  <Controls>
+    <CascadeName ControlType="System.Windows.Forms.TextBox" ControlText="SMA definition of 3.5 mm MauryFlat short 360B 834047 calibration standard" FullName="Me_TableLayoutPanel1_GroupBox2_CascadeName" Enabled="True" Visible="True" />
+    <DescriptionTextBox ControlType="System.Windows.Forms.TextBox" ControlText="SMA definition of 3.5 mm MauryFlat short 360B 834047 calibration standard&#xD;&#xA;&#xD;&#xA;This standard definition includes the capacitance &quot;SMA 3_5mm Capacitance&quot; in the SMA connector due to steps in the outer and inner conductors of the SMA as they transistion to the Maury 3.5 mm calibrations standards. Using this definition will calibrate to the SMA reference plane suitable for calibrating SMA devices." FullName="Me_TableLayoutPanel1_GroupBox3_DescriptionTextBox" Enabled="True" Visible="True" />
+    <CascadeElements ControlType="CustomFormControls.FLV_VariableIconList" ControlText="File View of the elements of the cascade" FullName="Me_TableLayoutPanel1_GroupBox1_Panel4_CascadeElements" Enabled="True" Visible="True" Count="1">
+      <Item Index="0" Text="Maury Flat short 360B 834047" Count="2">
+        <SubItem Index="0" Text="Maury Flat short 360B 834047" />
+        <SubItem Index="1" Text="C:\xampp\htdocs\SP6T_ECAL_switch_data\Maury Offset Short Definitions\Dimensional Definitions\Maury Flat short 360B 834047.model" />
+      </Item>
+    </CascadeElements>
+  </Controls>
+</Cascade>

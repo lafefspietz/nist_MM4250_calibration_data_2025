@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<Model FileName="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\Dimensional Definitions\8047A6 4K.model" CreationTime="2/11/2025 4:33:41 PM" AssemblyVersion="1.4.40.19108" UserName="dylan">
+  <MenuStripItems>
+    <SelectResultsDirectoryToolStripMenuItem Enabled="True" Checked="False" />
+    <RunCalculationsInParallel Enabled="True" Checked="True" />
+    <CalibrateToolStripMenuItem Enabled="True" Checked="False" />
+    <GetFrequenciesFromFile Enabled="True" Checked="False" />
+  </MenuStripItems>
+  <MenuStripTextBoxes>
+    <ResultsDirectory Enabled="True" Text="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\RT_Definitions\8047A6_model_Results" />
+    <NumberMonteCarloSimulations Enabled="True" Text="1000" />
+    <StartFrequency Enabled="True" Text=".01" />
+    <StopFrequency Enabled="True" Text="15" />
+    <StepFrequency Enabled="True" Text=".01" />
+    <FrequenciesFromFile Enabled="True" Text="" />
+    <EpsEffR Enabled="True" Text="1" />
+    <EpsEffI Enabled="True" Text="0" />
+  </MenuStripTextBoxes>
+  <MenuStripComboBoxes />
+  <Controls>
+    <DifferentialModel ControlType="System.Windows.Forms.CheckBox" ControlText="Only include variation of this model from its mean in the analysis." FullName="Me_TableLayoutPanel1_DifferentialModel" Enabled="True" Visible="True" Checked="False" />
+    <ModelOrigin ControlType="System.Windows.Forms.ComboBox" ControlText="NIST/Warsaw University of Technology" FullName="Me_TableLayoutPanel1_GroupBox2_ModelOrigin" Enabled="True" Visible="False" SelectedIndex="0" Count="1">
+      <Item Index="0" Text="NIST/Warsaw University of Technology" />
+    </ModelOrigin>
+    <ModelType ControlType="System.Windows.Forms.ComboBox" ControlText="Offset short with gap formed by short coaxial transmission line" FullName="Me_TableLayoutPanel1_GroupBox2_ModelType" Enabled="True" Visible="True" SelectedIndex="6" Count="9">
+      <Item Index="0" Text="Coaxial transmission line" />
+      <Item Index="1" Text="Center-conductor fingers" />
+      <Item Index="2" Text="Pin-depth gap" />
+      <Item Index="3" Text="Coaxial transmission line with correlated pin-depth gaps" />
+      <Item Index="4" Text="Coaxial short" />
+      <Item Index="5" Text="Capacitance of a step in coaxial transmission line" />
+      <Item Index="6" Text="Offset short with gap formed by short coaxial transmission line" />
+      <Item Index="7" Text="Coaxial transmission line with correlated pin-depth gaps (alternate formulation)" />
+      <Item Index="8" Text="Infinite coaxial transmission line (also use as model for sliding load)" />
+    </ModelType>
+    <ModelName ControlType="System.Windows.Forms.TextBox" ControlText="8047A6 SN: M751" FullName="Me_TableLayoutPanel1_GroupBox2_ModelName" Enabled="True" Visible="True" />
+    <ModelGroup ControlType="System.Windows.Forms.ComboBox" ControlText="Coaxial transmission lines" FullName="Me_TableLayoutPanel1_GroupBox2_ModelGroup" Enabled="True" Visible="True" SelectedIndex="1" Count="11">
+      <Item Index="0" Text="Generic" />
+      <Item Index="1" Text="Coaxial transmission lines" />
+      <Item Index="2" Text="Rectangular waveguide" />
+      <Item Index="3" Text="Microstrip" />
+      <Item Index="4" Text="Coplanar waveguide" />
+      <Item Index="5" Text="Cables" />
+      <Item Index="6" Text="Coupling" />
+      <Item Index="7" Text="Antennas" />
+      <Item Index="8" Text="Noise" />
+      <Item Index="9" Text="Operators" />
+      <Item Index="10" Text="User models" />
+    </ModelGroup>
+    <ModelDescription ControlType="System.Windows.Forms.TextBox" ControlText="Model for a short at the end of a coaxial line. Pin gap is modeled as a short section of line with a different inner-conductor diameter. From Arkadiusz Lewandowski, Multi-frequency approach to vector-network-analyzer scattering-parameter measurements, Warsaw University of Technology, 2010.&#xD;&#xA;&#xD;&#xA;Developed by Arkadiusz Lewandowski. Implemented by Dylan Williams." FullName="Me_TableLayoutPanel1_GroupBox3_ModelDescription" Enabled="True" Visible="True" />
+    <DescriptionTextBox ControlType="System.Windows.Forms.TextBox" ControlText="Maury offset short 8047A6 816648 SN: M751  29.97963 mm/1.1803&quot;" FullName="Me_TableLayoutPanel1_GroupBox4_DescriptionTextBox" Enabled="True" Visible="True" />
+    <ModelMechanisms ControlType="CustomFormControls.FLV_FixedDetailsList" ControlText="List of the mechanisms used in the model" FullName="Me_TableLayoutPanel1_GroupBox1_Panel4_ModelMechanisms" Enabled="True" Visible="True" Count="9">
+      <Item Index="0" Text="Inner-conductor diameter" Count="3">
+        <SubItem Index="0" Text="Inner-conductor diameter" />
+        <SubItem Index="1" Text="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\Dimensional Definitions\Inner Diameter.parameter" />
+        <SubItem Index="2" Text="1.52  mm" />
+      </Item>
+      <Item Index="1" Text="Outer-conductor diameter" Count="3">
+        <SubItem Index="0" Text="Outer-conductor diameter" />
+        <SubItem Index="1" Text="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\Dimensional Definitions\Outer Diameter.parameter" />
+        <SubItem Index="2" Text="3.5  mm" />
+      </Item>
+      <Item Index="2" Text="Inner-conductor offset" Count="3">
+        <SubItem Index="0" Text="Inner-conductor offset" />
+        <SubItem Index="1" Text="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\Dimensional Definitions\Conductor Eccentricity.parameter" />
+        <SubItem Index="2" Text="0  mm" />
+      </Item>
+      <Item Index="3" Text="Relative dielectric constant" Count="3">
+        <SubItem Index="0" Text="Relative dielectric constant" />
+        <SubItem Index="1" Text="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\Dimensional Definitions\ER.parameter" />
+        <SubItem Index="2" Text="1 " />
+      </Item>
+      <Item Index="4" Text="Metal conductivity (S/M) [Cu~6.e7]" Count="3">
+        <SubItem Index="0" Text="Metal conductivity (S/M) [Cu~6.e7]" />
+        <SubItem Index="1" Text="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\Dimensional Definitions\MetalCond_4K.parameter" />
+        <SubItem Index="2" Text="2.64E7 " />
+      </Item>
+      <Item Index="5" Text="Substrate loss tangent" Count="3">
+        <SubItem Index="0" Text="Substrate loss tangent" />
+        <SubItem Index="1" Text="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\Dimensional Definitions\zero.parameter" />
+        <SubItem Index="2" Text="0 " />
+      </Item>
+      <Item Index="6" Text="Outer-conductor length" Count="3">
+        <SubItem Index="0" Text="Outer-conductor length" />
+        <SubItem Index="1" Text="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\Dimensional Definitions\8047A6 4K Length Adjusted.sumofparameters" />
+        <SubItem Index="2" Text="" />
+      </Item>
+      <Item Index="7" Text="Pin diameter" Count="3">
+        <SubItem Index="0" Text="Pin diameter" />
+        <SubItem Index="1" Text="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\Dimensional Definitions\Pin Diameter.parameter" />
+        <SubItem Index="2" Text="0.9  mm" />
+      </Item>
+      <Item Index="8" Text="Pin-depth gap" Count="3">
+        <SubItem Index="0" Text="Pin-depth gap" />
+        <SubItem Index="1" Text="O:\67203\OnWafMea\DR\Data\Maury Offset Short Definitions\Dimensional Definitions\Pin Depth.parameter" />
+        <SubItem Index="2" Text="0.04445  mm" />
+      </Item>
+    </ModelMechanisms>
+  </Controls>
+</Model>
