@@ -1,0 +1,81 @@
+ <!doctype html>
+<html>
+<head>
+ <!-- 
+README MARKDOWN EDITOR!
+
+-->
+
+<!--Stop Google:-->
+<META NAME="robots" CONTENT="noindex,nofollow">
+    
+<link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAADw8OAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAABAAEAAAAQAAEAERAAABARAQEREQAAEBEBAAEAAAAREREAAQAAABEAEQABAAAAEQARAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAD//wAA3u8AAN7HAADSgwAA0u8AAMDvAADM7wAAzO8AAP//AAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon">
+
+    
+<!--
+ace.js project home:
+https://ace.c9.io/
+
+list of languages:
+https://cloud9-sdk.readme.io/docs/language-mode
+
+
+-->    
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script>
+            MathJax.Hub.Config({
+                tex2jax: {
+                inlineMath: [['$','$'], ['\\(','\\)']],
+                processEscapes: true,
+                processClass: "mathjax",
+                ignoreClass: "no-mathjax"
+                }
+            });//			MathJax.Hub.Typeset();//tell Mathjax to update the math
+        </script>
+<title>README.md EDITOR</title>
+</head>
+<body>
+<style>
+    #textio{
+        width:80%;
+        height:50em;
+    }
+</style>
+<textarea id ="textio"></textarea>
+
+<script>
+
+
+images = [];
+var httpc8 = new XMLHttpRequest();
+httpc8.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        images = JSON.parse(this.responseText);
+        mdstring = "";
+        for(var index = 0;index < images.length;index++) {    
+           mdstring += "![](" + images[index] + ")\n";
+        }
+        
+
+        for(var index = 0;index < images.length;index++) {    
+           mdstring += " - [photographs/" + images[index] + "](photographs/" + images[index] + ")\n";
+        }
+
+        
+        document.getElementById("textio").value = mdstring;
+    }
+};
+
+httpc8.open("GET", "list-files.php?directoryname=photographs/", true);
+httpc8.send();
+</script>
+<style>
+
+
+</style>
+
+</body>
+</html>

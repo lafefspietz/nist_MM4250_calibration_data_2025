@@ -26,10 +26,59 @@ This data set represents a set of measurements carried out on the Menlo Micro MM
 # [Scikit-RF](https://scikit-rf.org/) Cal File Sets
 
 
-# MUF Files
+# MUF File Sets
 
  - [6x6cal MUF Menu set](6x6cal_MUF_menu_set/)
- - [MOS MUF models](MOS_MUF_models/)
+ - [MUF models for 3.5 mm MOS standards](MOS_MUF_model_construction/35mm%20Maury%20Offset%20Shorts/)
+ - [MUF models for SMA MOS models](MOS_MUF_model_construction/SMA%20Maury%20Offset%20Shorts/)
+ - [Dimensional definitions used by MOS models](MOS_MUF_model_construction/Dimensional%20Definitions/)
+ - [Touchstone file outputs from MUF MOS models](MOS_MUF_model_construction/MOS_definitions_touchstone/)
+
+# [MUF Screenshots](MUF_screenshots/)
+
+ - [MUF_screenshots/3.5mm_MOS_definitions.png](MUF_screenshots/3.5mm_MOS_definitions.png)
+ - [MUF_screenshots/MOS_definition_files.png](MUF_screenshots/MOS_definition_files.png)
+ - [MUF_screenshots/MOS_dimensional_definitions.png](MUF_screenshots/MOS_dimensional_definitions.png)
+ - [MUF_screenshots/MUF_menu_set.png](MUF_screenshots/MUF_menu_set.png)
+ - [MUF_screenshots/SMA_MOS_definitions.png](MUF_screenshots/SMA_MOS_definitions.png)
+ - [MUF_screenshots/SMA_standards_cascades.png](MUF_screenshots/SMA_standards_cascades.png)
+ - [MUF_screenshots/offset_shortMOS5_SMA_construction.png](MUF_screenshots/offset_shortMOS5_SMA_construction.png)
+ - [MUF_screenshots/shunt_capacitance_MOSdef.png](MUF_screenshots/shunt_capacitance_MOSdef.png)
+ - [MUF_screenshots/tier1_menu_1.png](MUF_screenshots/tier1_menu_1.png)
+ - [MUF_screenshots/tier1_menu_2.png](MUF_screenshots/tier1_menu_2.png)
+ - [MUF_screenshots/tier1_menu_3.png](MUF_screenshots/tier1_menu_3.png)
+ - [MUF_screenshots/tier2_menu_1.png](MUF_screenshots/tier2_menu_1.png)
+ - [MUF_screenshots/tier2_menu_2.png](MUF_screenshots/tier2_menu_2.png)
+ - [MUF_screenshots/tier2_menu_3.png](MUF_screenshots/tier2_menu_3.png)
+
+
+# [Photographs](photographs/)
+
+ - [photographs/3kcal1.png](photographs/3kcal1.png)
+ - [photographs/3kcal2.png](photographs/3kcal2.png)
+ - [photographs/6x6dataplan.png](photographs/6x6dataplan.png)
+ - [photographs/VNA.png](photographs/VNA.png)
+ - [photographs/cold_image_whole.png](photographs/cold_image_whole.png)
+ - [photographs/cold_switch_closeup1.png](photographs/cold_switch_closeup1.png)
+ - [photographs/cold_switch_closeup2.png](photographs/cold_switch_closeup2.png)
+ - [photographs/cold_switch_test.png](photographs/cold_switch_test.png)
+ - [photographs/coupler.png](photographs/coupler.png)
+ - [photographs/dil_fridge_cold_parts.png](photographs/dil_fridge_cold_parts.png)
+ - [photographs/dilfridge1.png](photographs/dilfridge1.png)
+ - [photographs/dilfridge2.png](photographs/dilfridge2.png)
+ - [photographs/dilfridge3.png](photographs/dilfridge3.png)
+ - [photographs/dilfridge4.png](photographs/dilfridge4.png)
+ - [photographs/full_test_system.png](photographs/full_test_system.png)
+ - [photographs/hemt.png](photographs/hemt.png)
+ - [photographs/shorts.png](photographs/shorts.png)
+ - [photographs/switch-face-1.jpg](photographs/switch-face-1.jpg)
+ - [photographs/thru.png](photographs/thru.png)
+ - [photographs/vna_to_panel.png](photographs/vna_to_panel.png)
+ - [photographs/warm_RF_closeup.png](photographs/warm_RF_closeup.png)
+ - [photographs/whole-experiment.jpg](photographs/whole-experiment.jpg)
+ - [photographs/whole_experiment_3k.png](photographs/whole_experiment_3k.png)
+ - [photographs/whole_warm_system.png](photographs/whole_warm_system.png)
+ 
 
 ## Data Narrative
 
