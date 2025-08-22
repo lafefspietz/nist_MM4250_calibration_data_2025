@@ -5,12 +5,13 @@ This data set represents a set of measurements carried out on the Menlo Micro MM
 
 # Data Narrative
 
-
-![](photographs/3kcal1.png)
+![photos of switch in cryostat](photographs/3kcal1.png)
 
 On June 6, 2025, we recieved a MM4250 switch prototype, serial number #0031, from the team at Menlo when they came to visit Boulder.  We spent a couple of days trying to use a pair of switch controllers which turned out to have issues with low voltage or voltage not switching, and then we switched to the MEMSDuino controller we built at NIST, which took a day or so to adapt for the different drive line topology of this switch.  
 
-![](photographs/6x6dataplan.png)
+![table of measurements in 6x6cal data set](photographs/6x6dataplan.png)
+
+Calibration standards are referred to as MOS1, MOS2, MOS3, MOS4, MOS5 and MOS6, and "MOS" stands for "Maury Offset Short", and they are all defined as in the table in the above graphic. 
 
 On June 12, we put the 6 calibration standards on the switch and cooled it down for the first time in the 3 K cryostat in the "A" configuration. We then spent until June 20 cooling down the cryostat repeatedly while rotating to all of the 6 cyclic positions, labelled A, B, C, D, E, and F, of the calibration standards.  On June 20, we installed the switch in the XLD dilution refrigerator in wing 2 of building 1 at NIST.  We took some data at room temperature to understand the experiment, and then cooled the fridge to 4 kelvin to get data for comparison to base.  At 4 kelvin, we were not able to switch the switch into all the states anymore, something seemed to be broken. We believe that this was related to the charging effects which can be an issue in these switches if there is no DC path to ground. In this measurement we did not have a bias tee, and have concluded that this is very likely an essential element of any successful experiment using these switches.  
 
@@ -20,21 +21,28 @@ The first week of July we started to always use the switches with a bias tee, us
 
 Based on analysis of the first 6x6 cal we decided to repeat the entire set of 6 cooldowns in the hopes of getting better uncertainty in the full calibration than on the first attempt. This took from about July 21 to July 28, after which we transfered the switch into the SD dilution refrigerator in wing 1 of Building 1 at NIST.  Over the days July 30 to July 31, we measured the switch with the standards in the "F" configuration at room temperature, about 3 K, about 1 K, about 100 mK, and about 25 mK.  These data are all in the folder [dilution_refrigerator_data/](dilution_refrigerator_data/).
 
-![](photographs/dilfridge1.png)
+![photograph of dil fridge experiment](photographs/dilfridge1.png)
 
 Finally, we measured switch serial number #0030 in the 3 K system to get an estimate of insertion loss, return loss, and isolation.  This data set is in [single_switch_0030_data/](single_switch_0030_data/).
 
 The details of the calibration and uncertainties will be presented in the paper to be published with this data set, which will reference this data set.
 
-# Jupyter Notebooks
+# [Jupyter Notebooks](https://jupyter.org/)
 
-The following [Jupyter notebooks](https://jupyter.org/) first perform a calibration using the internal standards on the printed circuit board and apply those calibrations to the measured $S_{11}$
 
  - [scikitrf_tier1_cal.ipynb](scikitrf_tier1_cal.ipynb)
  - [scikitrf_tier2_cal.ipynb](scikitrf_tier2_cal.ipynb)
- - [single_switch_0030_data.ipynb](single_switch_0030_data.ipynb)
  - [dilution_refrigerator_data.ipynb](dilution_refrigerator_data.ipynb)
  - [MOS_definition_plots.ipynb](MOS_definition_plots.ipynb)
+ - [single_switch_0030_data.ipynb](single_switch_0030_data.ipynb)
+  
+All Jupyter notebooks use the [scikit-RF](https://scikit-rf.org/) open source(BSD license) Python library for both plotting and calibration as well as for working with the [Touchstone file format](https://en.wikipedia.org/wiki/Touchstone_file). 
+
+The above [Jupyter notebooks](https://jupyter.org/) first perform a calibration using the internal standards on the printed circuit board and apply those calibrations to the measured $S_{11}$ for each standard on each port over the 6 cooldowns, repeated for the first and second cooldown and at both room temperature and 3k.  This first notebook([scikitrf_tier1_cal.ipynb](scikitrf_tier1_cal.ipynb)) saves each calibrated measurement of each standard on each port as a Touchstone file(.s1p) in an appropriate sub-folder of [tier1_scikitrf_caldata/](tier1_scikitrf_caldata/).  The second notebook([scikitrf_tier2_cal.ipynb](scikitrf_tier2_cal.ipynb)) fetches the files saved by the first notebook and uses them to perform a tier 2 calibration with the standards files created by the MUF to represent calculated values of the $S_{11}$ of each standard, taken from the folder [MOS_MUF_model_construction/MOS_definitions_touchstone/](MOS_MUF_model_construction/MOS_definitions_touchstone/). Having constructed a tier 2 calibration with all 6 standards on all 6 ports, this second notebook then applies that calibration to a set of ideals where the $S_11$ is just -1, 1, or 0 for short, open and load, and then saves each ideal for each port warm and cold from each calibration in a set of folders inside the folder [tier2_scikitrf_caldata/](tier2_scikitrf_caldata/).  This is the data set which can then be used for further calibrations in the e-cal mode of operation that will apply to most users.
+
+The notebook [dilution_refrigerator_data.ipynb](dilution_refrigerator_data.ipynb) uses the output of the previous notebook from the second calibration at 3k to perform the e-cal which allows us to measure in a dilution refrigerator with a cryogenic [HEMT](https://en.wikipedia.org/wiki/High-electron-mobility_transistor) amplifier and a cold directional coupler using a measurement system similar to that reported in [E. M. Wei, R. A. Chamberlin, N. Kilmer, J. Kast, J. A. Connors and D. Williams, "On-Wafer Vector-Network-Analyzer Measurements at mK Temperatures," in IEEE Journal of Microwaves, vol. 3, no. 2, pp. 587-598, April 2023](https://doi.org/10.1109/JMW.2022.3232076).  
+
+The notebook [MOS_definition_plots.ipynb](MOS_definition_plots.ipynb) loads and plots the SMA MOS definitions created by MUF from [MUF models for SMA MOS models](MOS_MUF_model_construction/SMA%20Maury%20Offset%20Shorts/) to compare and see how much temperature matters. This notebook was created for debugging as we sorted out the value to use for the effective conductivity of the gold plated BeCu at cryogenic temperatures.  Finally, the data from the measurement of switch serial number $0030 are plotted and analyzed in [single_switch_0030_data.ipynb](single_switch_0030_data.ipynb).
 
 # Raw Data Sets
 
@@ -51,7 +59,16 @@ The following [Jupyter notebooks](https://jupyter.org/) first perform a calibrat
 
 # [Scikit-RF](https://scikit-rf.org/) Cal File Sets
 
+ - [tier1_scikitrf_caldata/tier1_3k1/](tier1_scikitrf_caldata/tier1_3k1/)
+ - [tier1_scikitrf_caldata/tier1_3k2/](tier1_scikitrf_caldata/tier1_3k2/)
+ - [tier1_scikitrf_caldata/tier1_295k1/](tier1_scikitrf_caldata/tier1_295k1/)
+ - [tier1_scikitrf_caldata/tier1_295k2/](tier1_scikitrf_caldata/tier1_295k2/)
+ - [tier2_scikitrf_caldata/tier2_3k1/](tier2_scikitrf_caldata/tier2_3k1/)
+ - [tier2_scikitrf_caldata/tier2_3k2/](tier2_scikitrf_caldata/tier2_3k2/)
+ - [tier2_scikitrf_caldata/tier2_295k1/](tier2_scikitrf_caldata/tier2_295k1/)
+ - [tier2_scikitrf_caldata/tier2_295k2/](tier2_scikitrf_caldata/tier2_295k2/)
 
+    
 # MUF File Sets
 
  - [6x6cal MUF Menu set](6x6cal_MUF_menu_set/)
