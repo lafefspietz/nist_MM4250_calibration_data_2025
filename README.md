@@ -2,6 +2,7 @@
 
 This data set represents a series of measurements carried out on the Menlo Micro MM4250 single pole six throw MEMS-based switches with built in calibration standards(short, open, load) on the printed circuit board.  This data set is the product of measurements carried out at [NIST](https://www.nist.gov/) [Boulder](https://www.boulder.doc.gov/) in the [Flux Quantum Electronics(FQE)](https://www.nist.gov/programs-projects/flux-quantum-electronics) project of the [Superconductive Electronics](https://www.nist.gov/ctl/rf-technology-division/superconductive-electronics-group) group in the [Radio Frequency Technology](https://www.nist.gov/ctl/rf-technology-division) division of the [Communications Technology Laboratory](https://www.nist.gov/ctl). Data were taken primarily by Lafe Spietz in a cryostat which was built in-house at NIST which has a base temperature of just under 3 [kelvin](https://www.bipm.org/en/si-base-units/kelvin) and a [dilution refrigerator](https://en.wikipedia.org/wiki/Dilution_refrigerator) with a base temperature of 25 mK.  Data were taken from early June through early August of 2025, in [building 1 of NIST, Boulder](https://www.openstreetmap.org/#map=18/39.995189/-105.261952).
 
+This data set is to be released along with a paper in peparation which will have the details of calibration and uncertainty analysis.
 
 # Data Narrative
 
@@ -9,7 +10,7 @@ This data set represents a series of measurements carried out on the Menlo Micro
 
 On June 6, 2025, we recieved a MM4250 switch prototype, serial number #0031, from the team at Menlo when they came to visit Boulder.  We spent a couple of days trying to use a pair of switch controllers which turned out to have issues with low voltage or voltage not switching, and then we switched to the MEMSDuino controller we built at NIST, which took a day or so to adapt for the different drive line topology of this switch.  
 
-![table of measurements in 6x6cal data set](photographs/6x6dataplan.png)
+[![table of measurements in 6x6cal data set](photographs/6x6dataplan.png)](photographs/6x6dataplan.png)
 
 Calibration standards are referred to as MOS1, MOS2, MOS3, MOS4, MOS5 and MOS6, and "MOS" stands for "Maury Offset Short", and they are all defined as in the table in the above graphic. 
 
@@ -57,6 +58,12 @@ The notebook [MOS_definition_plots.ipynb](MOS_definition_plots.ipynb) loads and 
  - [Room temperature data from dil fridge(dilution_refrigerator_data/roomtemp/)](dilution_refrigerator_data/roomtemp/)
  - [Data from serial number #0030 at 3k and room temperature(single_switch_0030_data/)](single_switch_0030_data/)
 
+The first 4 data sets here represent the first(6x6cal1) and second(6x6cal2) sequences of cooldowns, each taking a day or so, over the course of a couple of weeks(separated by about a week), and sorted by temperature into folders "3k" and "295k".
+
+The subsequent five data sets are measurements of standards in the "F" configuration in a dilution refrigerator, along with internal standards at five different temperatures. 
+
+The final folder is the raw data from the measurement of the switch with serial number 0030 on which we did the scalar calibrated measurement of insertion loss and return loss which are analyzed in the Jupyter notebook [single_switch_0030_data.ipynb](single_switch_0030_data.ipynb).
+
 # [Scikit-RF](https://scikit-rf.org/) Cal File Sets
 
  - [tier1_scikitrf_caldata/tier1_3k1/](tier1_scikitrf_caldata/tier1_3k1/)
@@ -68,6 +75,7 @@ The notebook [MOS_definition_plots.ipynb](MOS_definition_plots.ipynb) loads and 
  - [tier2_scikitrf_caldata/tier2_295k1/](tier2_scikitrf_caldata/tier2_295k1/)
  - [tier2_scikitrf_caldata/tier2_295k2/](tier2_scikitrf_caldata/tier2_295k2/)
 
+These folders contain the products of the first and then second tier calibration in scikit-rf at each temperature for each set of cooldowns. 
     
 # MUF File Sets
 
@@ -76,6 +84,12 @@ The notebook [MOS_definition_plots.ipynb](MOS_definition_plots.ipynb) loads and 
  - [MUF models for SMA MOS models](MOS_MUF_model_construction/SMA%20Maury%20Offset%20Shorts/)
  - [Dimensional definitions used by MOS models](MOS_MUF_model_construction/Dimensional%20Definitions/)
  - [Touchstone file outputs from MUF MOS models](MOS_MUF_model_construction/MOS_definitions_touchstone/)
+
+The first folder above, [6x6cal MUF Menu set](6x6cal_MUF_menu_set/), contains the MUF "menus" ([XML](https://en.wikipedia.org/wiki/XML) files with ".vnauncert" file extension) used to perform the whole calibration. For these to work, the whole set should be placed in the folder where the data set is, with the same exact file names as in the sample data sets here, and in the graphic at the top of this document.  Due to the way MUF works with the file structures, some care must be taken to make sure that the menus find all the files they need from the standards definitions.  This folder also has a sub-folder with some needed XML files. The tier 1 calibration menus should, if they run properly, generate folders with files in them which can be passed along to the tier 1 menus(one for each port), which should then create the final Touchstone files used to perform the ecal in various sub-folders. This set of files is the MUF equivalent of what is in the tier2_scikitrf_caldata folder for the scikit-rf version of the calibration.  
+
+The second folder, [MUF models for 3.5 mm MOS standards](MOS_MUF_model_construction/35mm%20Maury%20Offset%20Shorts/), contains the MUF models, again as a set of XML files reconginzable by the MUF, for the 3.5 mm standards MOS1-MOS6.  The third folder, [MUF models for SMA MOS models](MOS_MUF_model_construction/SMA%20Maury%20Offset%20Shorts/) is a set of ".cascade" files(also XML) which convert the 3.5 mm standards to SMA using the shunt capacitance calculated from the reference given in the paper.  The folder "[Dimensional definitions used by MOS models](MOS_MUF_model_construction/Dimensional%20Definitions/)" contains a number of XML files in formats created by MUF which are used by the other standards files. These three folders together form a networked collection of XML files, which all together make up the MUF model of the MOS standards used in this calibration and described in the paper.
+
+The final MUF folder, [Touchstone file outputs from MUF MOS models](MOS_MUF_model_construction/MOS_definitions_touchstone/), contains the MUF models of the 6 standards at two temperatures in a .s1p format. MOS1 has only one value, since the flat short has no conductivity or length numbers to adjust for temperature. All the other standards have either a "_warm" or "_cold" suffix, which indicate 295 K or 4 K(the difference between 4 K and 3 K is insignificant at the uncertainties quoted in this work). This folder is the only one needed for calibrations both with MUF and with scikit-rf. We hope at some time in the future to replicate these files using pure scikit-rf and check that they get identical answers to the MUF, but that work remains in progress at the time of this writing.
 
 # [MUF Screenshots](MUF_screenshots/)
 
@@ -94,6 +108,7 @@ The notebook [MOS_definition_plots.ipynb](MOS_definition_plots.ipynb) loads and 
  - [MUF_screenshots/tier2_menu_2.png](MUF_screenshots/tier2_menu_2.png)
  - [MUF_screenshots/tier2_menu_3.png](MUF_screenshots/tier2_menu_3.png)
 
+These screen shots are for any future reference in which we want to show what the parts of the MUF look like in the process of both performing calibrations and generating data to describe the various standards used here.  The hyperlink in the heading of this section goes to a README with the screen shots annotated.
 
 # [Photographs](photographs/)
 
@@ -121,5 +136,8 @@ The notebook [MOS_definition_plots.ipynb](MOS_definition_plots.ipynb) loads and 
  - [photographs/whole-experiment.jpg](photographs/whole-experiment.jpg)
  - [photographs/whole_experiment_3k.png](photographs/whole_experiment_3k.png)
  - [photographs/whole_warm_system.png](photographs/whole_warm_system.png)
+
+
+These are useful photographs of various parts of the measurements performed here. The hyperlink in the title of this section points to a README with annotations. All photographs, like the rest of this document, are available in the Public Domain for any use whatsoever.
  
 

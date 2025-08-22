@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<Model FileName="Z:\lafe\MEMS switches\data\XLD_calibration_fall_2024\MUF\open.model" CreationTime="12/9/2024 3:55:43 PM" AssemblyVersion="1.4.29.18599" UserName="lfs">
+  <MenuStripItems>
+    <SelectResultsDirectoryToolStripMenuItem Enabled="True" Checked="False" />
+    <RunCalculationsInParallel Enabled="True" Checked="True" />
+    <CalibrateToolStripMenuItem Enabled="True" Checked="False" />
+  </MenuStripItems>
+  <MenuStripTextBoxes>
+    <ResultsDirectory Enabled="True" Text="" />
+    <NumberMonteCarloSimulations Enabled="True" Text="1000" />
+    <StartFrequency Enabled="True" Text="1" />
+    <StopFrequency Enabled="True" Text="50" />
+    <StepFrequency Enabled="True" Text="1" />
+    <EpsEffR Enabled="True" Text="1" />
+    <EpsEffI Enabled="True" Text="0" />
+  </MenuStripTextBoxes>
+  <MenuStripComboBoxes />
+  <Controls>
+    <DifferentialModel ControlType="System.Windows.Forms.CheckBox" ControlText="Only include variation of this model from its mean in the analysis." FullName="Me_TableLayoutPanel1_DifferentialModel" Enabled="True" Visible="True" Checked="False" />
+    <ModelOrigin ControlType="System.Windows.Forms.ComboBox" ControlText="NIST" FullName="Me_TableLayoutPanel1_GroupBox2_ModelOrigin" Enabled="True" Visible="False" SelectedIndex="0" Count="1">
+      <Item Index="0" Text="NIST" />
+    </ModelOrigin>
+    <ModelType ControlType="System.Windows.Forms.ComboBox" ControlText="Open" FullName="Me_TableLayoutPanel1_GroupBox2_ModelType" Enabled="True" Visible="True" SelectedIndex="1" Count="16">
+      <Item Index="0" Text="Short" />
+      <Item Index="1" Text="Open" />
+      <Item Index="2" Text="Load" />
+      <Item Index="3" Text="Thru" />
+      <Item Index="4" Text="Identity" />
+      <Item Index="5" Text="Lossless TEM airline" />
+      <Item Index="6" Text="Shunt capacitance and conductance" />
+      <Item Index="7" Text="Series resistance and inductance" />
+      <Item Index="8" Text="Impedance transformer" />
+      <Item Index="9" Text="Generic transmission line from measured propagation constant" />
+      <Item Index="10" Text="Generic HP model for a load, open, or short" />
+      <Item Index="11" Text="Series capacitor" />
+      <Item Index="12" Text="Shunt inductor" />
+      <Item Index="13" Text="Shunt L-C resonant circuit" />
+      <Item Index="14" Text="Series L-C tank circuit" />
+      <Item Index="15" Text="Attenuator" />
+    </ModelType>
+    <ModelName ControlType="System.Windows.Forms.TextBox" ControlText="Open" FullName="Me_TableLayoutPanel1_GroupBox2_ModelName" Enabled="True" Visible="True" />
+    <ModelGroup ControlType="System.Windows.Forms.ComboBox" ControlText="Generic" FullName="Me_TableLayoutPanel1_GroupBox2_ModelGroup" Enabled="True" Visible="True" SelectedIndex="0" Count="11">
+      <Item Index="0" Text="Generic" />
+      <Item Index="1" Text="Coaxial transmission lines" />
+      <Item Index="2" Text="Rectangular waveguide" />
+      <Item Index="3" Text="Microstrip" />
+      <Item Index="4" Text="Coplanar waveguide" />
+      <Item Index="5" Text="Cables" />
+      <Item Index="6" Text="Coupling" />
+      <Item Index="7" Text="Antennas" />
+      <Item Index="8" Text="Noise" />
+      <Item Index="9" Text="Operators" />
+      <Item Index="10" Text="User models" />
+    </ModelGroup>
+    <ModelDescription ControlType="System.Windows.Forms.TextBox" ControlText="Open in a 50 ohm system.&#xD;&#xA;&#xD;&#xA;Authored by Dylan Williams." FullName="Me_TableLayoutPanel1_GroupBox3_ModelDescription" Enabled="True" Visible="True" />
+    <DescriptionTextBox ControlType="System.Windows.Forms.TextBox" ControlText="" FullName="Me_TableLayoutPanel1_GroupBox4_DescriptionTextBox" Enabled="True" Visible="True" />
+    <ModelMechanisms ControlType="CustomFormControls.FLV_FixedDetailsList" ControlText="List of the mechanisms used in the model" FullName="Me_TableLayoutPanel1_GroupBox1_Panel4_ModelMechanisms" Enabled="True" Visible="True" Count="4">
+      <Item Index="0" Text="Port 1 conductance" Count="3">
+        <SubItem Index="0" Text="Port 1 conductance" />
+        <SubItem Index="1" Text="Z:\lafe\MEMS switches\data\XLD_calibration_fall_2024\MUF\open_inputs\zero_conductance.parameter" />
+        <SubItem Index="2" Text="0  mho" />
+      </Item>
+      <Item Index="1" Text="Port 2 conductance" Count="3">
+        <SubItem Index="0" Text="Port 2 conductance" />
+        <SubItem Index="1" Text="Z:\lafe\MEMS switches\data\XLD_calibration_fall_2024\MUF\open_inputs\zero_conductance.parameter" />
+        <SubItem Index="2" Text="0  mho" />
+      </Item>
+      <Item Index="2" Text="Port 1 capacitance" Count="3">
+        <SubItem Index="0" Text="Port 1 capacitance" />
+        <SubItem Index="1" Text="Z:\lafe\MEMS switches\data\XLD_calibration_fall_2024\MUF\open_inputs\zero_capacitance.parameter" />
+        <SubItem Index="2" Text="0  pF" />
+      </Item>
+      <Item Index="3" Text="Port 2 capacitance" Count="3">
+        <SubItem Index="0" Text="Port 2 capacitance" />
+        <SubItem Index="1" Text="Z:\lafe\MEMS switches\data\XLD_calibration_fall_2024\MUF\open_inputs\zero_capacitance.parameter" />
+        <SubItem Index="2" Text="0  pF" />
+      </Item>
+    </ModelMechanisms>
+  </Controls>
+</Model>
