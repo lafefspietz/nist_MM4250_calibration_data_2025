@@ -1,0 +1,56 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  File repository for Cryogenic RF MEMS Switch with
+  Electronic Calibration Capability paper
+message: >-
+  If you use this dataset, please cite it using the metadata
+  from this file.
+type: dataset
+authors:
+  - given-names: Lafe
+    family-names: Spietz
+    email: lafe.f.spietz@nist.gov
+    affiliation: NIST
+    orcid: 'https://orcid.org/0009-0003-8717-5558'
+  - given-names: Chris
+    family-names: Giovanniello
+    affiliation: Menlo Microsystems
+  - given-names: Brandon
+    family-names: Takaki
+    affiliation: Menlo Microsystems
+  - given-names: Wei
+    family-names: Ye
+    affiliation: ETLinx Systems
+  - given-names: Beverly
+    family-names: Boiko
+    affiliation: FormFactor
+  - given-names: Christian
+    family-names: Long
+    affiliation: NIST
+  - given-names: Nathan
+    family-names: Flowers-Jacobs
+    affiliation: NIST
+  - given-names: Adam
+    family-names: Sirois
+    affiliation: NIST
+  - given-names: Peter
+    family-names: Hopkins
+    affiliation: NIST
+  - given-names: Samuel
+    family-names: Benz
+    affiliation: NIST
+  - given-names: 'Dylan '
+    family-names: Williams
+    affiliation: NIST
+repository-code: 'https://github.com/lafefspietz/MEMSduino'
+keywords:
+  - mems
+  - calibration
+  - microwave
+  - sma
+  - physics
+  - SMA
+license: CC0-1.0
