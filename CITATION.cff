@@ -45,12 +45,10 @@ authors:
   - given-names: 'Dylan '
     family-names: Williams
     affiliation: NIST
-repository-code: 'https://github.com/lafefspietz/MEMSduino'
+repository-code: 'https://github.com/lafefspietz/nist_MM4250_calibration_data_2025/'
 keywords:
   - mems
   - calibration
   - microwave
-  - sma
   - physics
-  - SMA
 license: CC0-1.0
